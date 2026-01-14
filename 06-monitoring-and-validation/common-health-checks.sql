@@ -7,10 +7,6 @@ FROM v$database;
 SELECT flashback_on 
 FROM v$database;
 
--- Apply lag & Transport lag check
-SELECT name, value, unit 
-FROM v$dataguard_stats;
-
 -- Check the status of data guard processes
 SELECT process, status, sequence# 
 FROM v$managed_standby;
